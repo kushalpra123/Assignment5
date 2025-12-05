@@ -8,6 +8,9 @@ async function loadCryptos() {
 
     const response = await fetch(url);
     const data = await response.json();
+    
+     const table = document.getElementById("cryptoTable");
+    table.innerHTML = "";
 
     console.log(data); 
 }
