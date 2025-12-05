@@ -24,6 +24,8 @@ async function loadCryptos() {
         table.appendChild(row);
     });
 
+document.getElementById("refreshBtn").addEventListener("click", loadCryptos);
+
     console.log(data); 
 }
  loadCryptos();
