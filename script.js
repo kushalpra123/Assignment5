@@ -8,9 +8,21 @@ async function loadCryptos() {
 
     const response = await fetch(url);
     const data = await response.json();
-    
+
      const table = document.getElementById("cryptoTable");
     table.innerHTML = "";
+    data.forEach(coin => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>
+                <img src="${coin.image}" width="30">
+                ${coin.name}
+            </td>
+            <td>$${coin.current_price.toLocaleString()} CAD</td>
+            <td>${coin.price_change_percentage_24h.toFixed(2)}%</td>
+        `;
+        table.appendChild(row);
+    });
 
     console.log(data); 
 }
