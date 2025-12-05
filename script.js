@@ -25,7 +25,7 @@ async function loadCryptos() {
     });
 
 
-
+    console.log(data); 
 }
 document.getElementById("refreshBtn").addEventListener("click", loadCryptos);
 
