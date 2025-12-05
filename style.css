@@ -60,4 +60,15 @@ button {
 
 button:hover {
     background: #2ea043;
+
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #8b949e;
+}
+footer a {
+    color: #58a6ff;
+    text-decoration: none;
 }
